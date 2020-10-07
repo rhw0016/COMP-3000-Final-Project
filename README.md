@@ -37,4 +37,4 @@ make the project name string be the first object - return first object for proje
       
       
 # Empathy Map:
-![Empathy Map]() 
+![Empathy Map](https://github.com/rhw0016/COMP-3000-Final-Project/blob/master/Empathy%20Map.docx) 
