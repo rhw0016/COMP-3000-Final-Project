@@ -5,12 +5,17 @@ final project
 This is a project management system for egineering teams. 
 
 The system will:
-Track project workers by reading Project List and Worker List
+
+Track project workers by reading Project List and Worker List 
       - Overwrite/Update/Add Project/workers
+
 Calculate if a program is over or under budget - use sub-task estimates of budget required
+
 Calculate the estimated completion dates based off of sub-task lengths
-Returns how many worker are on a project
-Returns what project a worker is on
+
+Return how many workers are on a project
+
+Return what project a worker is on
 
 
 # Functions: 
