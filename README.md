@@ -23,6 +23,18 @@ Class "Project" with a constructor that accepts x arguments, use array "projarr"
       
       Project projarr[y=3] = {Project(A,B), Project(A,B), Project(A,B)};
       
+Nest constructors/classes in order to create projects with sub tasks?
+
+reads in a file until the end
+
+sum sub-task budgets for project budgets and compare to budget goal, returns bool value true/false if under/over budget
+
+sum number of workers on project and track with "Project" object
+
+make the project name string be the first object - return first object for project name. If asked what project(s) a person is on, check array of strigs (peoples names) with == and output...
+
+^^^ above comments made on loose understanding of how classes/constructors work. Needs work to flesh out. 
+      
       
 # Empathy Map:
 ![Empathy Map]() 
