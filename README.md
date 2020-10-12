@@ -2,7 +2,7 @@
 final project
 
 # Description: 
-This is a project management system for egineering teams. 
+This is a project management system for engineering teams. 
 
 The system will:
 
@@ -34,6 +34,95 @@ sum number of workers on project and track with "Project" object
 make the project name string be the first object - return first object for project name. If asked what project(s) a person is on, check array of strigs (peoples names) with == and output...
 
 ^^^ above comments made on loose understanding of how classes/constructors work. Needs work to flesh out. 
+
+---------------------------------------------
+Alex Cardona's pseudo code:
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <stdio.h>
+using namespace std;
+int pF="Project File.txt"
+int nF="Name File.txt"
+
+int readFile(Name)
+{
+	return //Something
+}
+
+bool budgetCalc
+{
+readFile(pF)
+//Do some math
+
+if (cost > budget)
+	{
+
+	return False
+	}
+else
+{
+	return True
+} 
+}
+
+int projectWorker()
+{
+	readFile(nF)
+	//Check who is true for each project 
+	//Count trues in each project name
+	// List Names
+}
+
+int main()
+{
+
+	//Ask the user what to do
+	// Calculate Budget = 1
+	// Who is working on a project =2
+
+	switch (option)
+	{
+	case 1:
+		//Pick a Project Name
+		budgetCalc("Project Name");
+
+	case 2:
+		projectWorker("Project Name")
+	}
+}
+
+-------------------
+Robert Waudby's pseudo code:
+
+class Project
+{
+public:
+bool budgetCalc(string); //string is project name?
+int projectWorkers(string); //string is project name?
+
+private:
+int score;
+}; 
+
+//member functions
+bool Project::budgetCalc(string A)
+{
+readFile(pF)
+//Do some math
+
+if (cost > budget)
+{
+
+return False
+}
+else
+{
+return True
+}
+}
+
       
       
 # Empathy Map:
