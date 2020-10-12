@@ -110,11 +110,9 @@ int score;
 bool Project::budgetCalc(string A)
 {
 readFile(pF)
-//Do some math
-
+	//Do some math
 if (cost > budget)
 {
-
 return False
 }
 else
