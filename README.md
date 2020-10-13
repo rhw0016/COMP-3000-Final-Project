@@ -9,9 +9,9 @@ The system will:
 Track project workers by reading Project List and Worker List 
       - Overwrite/Update/Add Project/workers
 
-Calculate if a program is over or under budget - use sub-task estimates of budget required
+Calculate if entire program is over or under budget - use project estimates
 
-Calculate the estimated completion dates based off of sub-task lengths
+Calculate the estimated long term completion date based off of project lengths
 
 Return how many workers are on a project
 
@@ -27,9 +27,9 @@ Nest constructors/classes in order to create projects with sub tasks?
 
 reads in a file until the end
 
-sum sub-task budgets for project budgets and compare to budget goal, returns bool value true/false if under/over budget
+sum project budgets for total budget and compare to budget goal, returns bool value true/false if under/over budget
 
-sum number of workers on project and track with "Project" object
+sum number of workers on project and track
 
 make the project name string be the first object - return first object for project name. If asked what project(s) a person is on, check array of strigs (peoples names) with == and output...
 
@@ -58,7 +58,6 @@ readFile(pF)
 
 if (cost > budget)
 	{
-
 	return False
 	}
 else
@@ -72,8 +71,7 @@ int projectWorker()
 	readFile(nF)
 	//Check who is true for each project 
 	//Count trues in each project name
-	// List Names
-}
+	// returns integer (number of people on project)
 
 int main()
 {
