@@ -1,8 +1,43 @@
 //COMP-3000-Final-Project
+// PUT FILE IN SOURCE FILE FOR PROGRAM 
 
 #include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 
-int main() {
 
+class Worker
+{
+public:
+	bool project1;
+	bool project2;
+	bool project3;
+
+	Worker(bool A, bool B, bool C) {
+		project1 = A;
+		project2 = B;
+		project3 = C;
+	}
+
+private:
+
+};
+
+
+int main()
+{
+	Worker worker1(true, false, false);
+
+	cout << "Status of worker for project 1: " << worker1.project1 << "   Status of worker for project 2: " << worker1.project2 << "   Status of worker for project 3: " << worker1.project3 << endl; 
+	
+	fstream newfile;
+	newfile.open("workerData.txt", ios::in); //open a file to perform read operation using file object
+	if (newfile.is_open()) {   //checking whether the file is open
+		string tp;
+		while (getline(newfile, tp)) {  //read data from file object and put it into string.
+			cout << tp << "\n";   //print the data of the string
+		}
+		newfile.close();   //close the file object.
+	}
 }
