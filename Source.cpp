@@ -64,4 +64,4 @@ int main()
     //Find a way to use projectData[][] outside of readSaveCVS function
     cout << endl << "Writing a different CVS" << endl;
     writeCVSLoop();
-}
+
