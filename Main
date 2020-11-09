@@ -40,4 +40,42 @@ int main()
 		}
 		newfile.close();   //close the file object.
 	}
+	
+    //---------------------------------------------------------------
+    
+    int option;
+    char project[4]
+        ifstream infile;
+    infile.open("projectList.csv");
+
+    while (infile.good()) {
+        string line;
+        getline(infile, line, ','); // replace line with project
+        cout << line << endl;
+    }
+
+    cout << "Choose an option :" << endl
+        << "1 : See if a project is over budget" << endl
+        << "2 : See what project a worker is on" << endl;
+    cin >> option;
+
+    switch (option)
+    {
+    case 1:
+        //Pick a Project Name
+       // budgetCalc("Project Name");
+        cout << "1";
+        break;
+    case 2:
+        //  projectWorker("Project Name")
+        cout << "2";
+        break;
+    case default:
+        cout << "incorrect project number";
+        break;
+    }
+
+    return 0;
+
+
 }
