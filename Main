@@ -13,10 +13,9 @@ void writeCVSLoop()
     // Send data to the stream
     int i = 0;
 
-    myFile << "Foo\n";
     while (i<6)
     {
-        myFile <<pow(2,i)<<"\n";
+        myFile <<pow(2,i)<<",";
         i = i + 1;
     }    
     // Close the file
