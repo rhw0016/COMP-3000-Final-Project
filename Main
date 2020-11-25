@@ -1,81 +1,98 @@
 //COMP-3000-Final-Project
-// PUT FILE IN SOURCE FILE FOR PROGRAM 
-
-#include <iostream>
 #include <fstream>
 #include <string>
+#include <vector> 
+#include <array> 
+#include <cstdlib>
+#include <stdlib.h>
+#include <iostream>
+
 using namespace std;
-
-
-class Worker
-{
-public:
-	bool project1;
-	bool project2;
-	bool project3;
-
-	Worker(bool A, bool B, bool C) {
-		project1 = A;
-		project2 = B;
-		project3 = C;
-	}
-
-private:
-
-};
-
 
 int main()
 {
-	Worker worker1(true, false, false);
+    cout << "Worker 1 is Keel, James | Worker 2 is Smith, Will | Worker 3 is Joel, Billy" << endl;
 
-	cout << "Status of worker for project 1: " << worker1.project1 << "   Status of worker for project 2: " << worker1.project2 << "   Status of worker for project 3: " << worker1.project3 << endl; 
-	
-	fstream newfile;
-	newfile.open("workerData.txt", ios::in); //open a file to perform read operation using file object
-	if (newfile.is_open()) {   //checking whether the file is open
-		string tp;
-		while (getline(newfile, tp)) {  //read data from file object and put it into string.
-			cout << tp << "\n";   //print the data of the string
-		}
-		newfile.close();   //close the file object.
-	}
-	
-    //---------------------------------------------------------------
-    
-    int option;
-    char project[4]
-        ifstream infile;
-    infile.open("projectList.csv");
+    int projectData[3][5];              
+    projectData[0][0] = 1; projectData[0][1] = 10000; projectData[0][2] = 1; projectData[0][3] = 0; projectData[0][4] = 0;
+    projectData[1][0] = 2; projectData[1][1] = 20000; projectData[1][2] = 1; projectData[1][3] = 1; projectData[1][4] = 0;
+    projectData[2][0] = 3; projectData[2][1] = 30000; projectData[2][2] = 1; projectData[2][3] = 1; projectData[2][4] = 1;
 
-    while (infile.good()) {
-        string line;
-        getline(infile, line, ','); // replace line with project
-        cout << line << endl;
-    }
+    int i = 0;
+    int j = 0;
 
-    cout << "Choose an option :" << endl
-        << "1 : See if a project is over budget" << endl
-        << "2 : See what project a worker is on" << endl;
-    cin >> option;
 
-    switch (option)
+    for (int i = 0; i < 3; i++)
     {
+        for (int j = 0; j < 5; j++)
+        {
+            cout << projectData[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    //------------------------ Sum project budgets:
+    int totalBudget = 0;
+    int budgetGoal = 100000;
+    int budgetDiff = 0;
+    totalBudget = (projectData[0][1] + projectData[1][1] + projectData[2][1]);
+    if (totalBudget < budgetGoal)
+        budgetDiff = budgetGoal - totalBudget; 
+        cout << "You are under-budget. You have currently used $" << totalBudget << ". Your remaining budget is $" << budgetDiff << endl;
+    if (totalBudget > budgetGoal)
+    {
+        budgetDiff = budgetGoal - totalBudget;
+        cout << "You are over budget by $" << budgetDiff << endl; 
+    }
+
+    //------------------------ Reports sum of workers on project:
+    int project1Workers; int project2Workers; int project3Workers; int projectSelection; 
+
+    project1Workers = (projectData[0][2] + projectData[0][3] + projectData[0][4]);
+
+    project2Workers = (projectData[1][2] + projectData[1][3] + projectData[1][4]);
+
+    project3Workers = (projectData[2][2] + projectData[2][3] + projectData[2][4]);
+
+
+
+    cout << "What project would you like to see the number of workers on? Please enter 1, 2, or 3. " << endl;
+
+    cin >> projectSelection;
+
+
+
+    switch (projectSelection) {
+
     case 1:
-        //Pick a Project Name
-       // budgetCalc("Project Name");
-        cout << "1";
+
+        cout << "There are " << project1Workers << " on project 1." << endl;
         break;
+
     case 2:
-        //  projectWorker("Project Name")
-        cout << "2";
+
+        cout << "There are " << project2Workers << " on project 2." << endl;
         break;
-    case default:
-        cout << "incorrect project number";
+
+    case 3:
+
+        cout << "There are " << project3Workers << " on project 3." << endl;
+        break;
+    
+    default: 
+
+        cout << "pick another number"; 
         break;
     }
 
-    return 0;
+    //------------------------ Report projects that each worker is on: 
+    //    use switch to choose between workers (by number), and use setwidth   !!!
+
+//    string workerNames[4] = {"Names", "Keel, james", "Smith, Will", "Joel, Billy"};
+//    cout << "Worker Name | Project:  1   2   3";
+//    cout << workerNames[1] << "         " << projectData[0][2] << "    " << projectData[1][2] << "    " << ;
+
 
 
 }
+
