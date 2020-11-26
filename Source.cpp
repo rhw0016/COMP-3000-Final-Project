@@ -7,23 +7,23 @@
 #include <stdlib.h>
 using namespace std;
 ////
-////void writeCVSLoop()
-////{
-////    // Create an output filestream object
-////    std::ofstream myFile("fooLoop.csv");
-////
-////    // Send data to the stream
-////    int i = 0;
-////
-////    while (i<6)
-////    {
-////        myFile <<pow(2,i)<<",";
-////        i = i + 1;
-////    }    
-////    // Close the file
-////    myFile.close();
-////    cout << "A Different File was also written"<<endl<<"It must be search in the Project folder"<<endl ;
-////}
+//void writeCVSLoop()
+//{
+//    // Create an output filestream object
+//    std::ofstream myFile("test.csv");
+
+    // Send data to the stream
+//    int i = 0;
+
+//    while (i<6)
+//    {
+//        myFile <<pow(2,i)<<",";
+//        i = i + 1;
+//    }    
+    // Close the file
+//    myFile.close();
+//    cout << "A Different File was also written"<<endl<<"It must be search in the Project folder"<<endl ;
+//}
 ////void readSaveCVS()
 //{
 //
@@ -62,7 +62,7 @@ using namespace std;
 
 int main() 
 {
-
+   
 
     string workerData[4] = { "Names","Bob", "Dylan", "Chad" };
     //------------------------------------------------
@@ -132,6 +132,56 @@ int main()
         budgetDiff = budgetGoal - totalBudget;
         cout << "You are over budget by $" << budgetDiff << endl;
     }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    ////////////////////////////////////////////////////////////////
+    //------------------------Write projectData to outputFile---////
+    ///////////////////////////////////////////////////////////////
+    system("pause");
+        // Create an output filestream object
+        std::ofstream writeFile("projectListRW.csv");
+
+        // Send data to the stream
+      int  icount = 0;
+      i = 0;
+    
+        while (i< 3)
+        {
+            j = 0;
+
+            while (j < 5)
+                {
+                    writeFile << projectData[i][j] << ",";
+                    j++;
+                }
+                
+           
+            i++;
+
+        }
+        j = 0;
+        i = 0;
+       
+
+        cout <<"\n Fuck look for test.csv" <<endl;
+        // Close the file
+        writeFile.close();
+        system("pause");
+
 
 
 
