@@ -82,12 +82,11 @@ int main()
 
 
     //--------------------------------------------------------------
- 
     //readSaveCVS();
     //---------------------------------------------------------------
     cout << "\nPrinted Project List \n";
     ifstream myFile;
-    myFile.open("projectList.csv"); //Save this to a CSV Comma delim>>>>> 1,1000,100,10,1,2,2000,200,20,2,3,3000,300,30,3
+    myFile.open("projectListRW.csv"); //Save this to a CSV Comma delim>>>>> 1,1000,100,10,1,2,2000,200,20,2,3,3000,300,30,3
     int projectData[3][5];
     int i = 0;
     int j = 0;
@@ -140,10 +139,10 @@ int main()
 
 
 
-
-
-
-
+    //////////////////////////
+    //   Test Read/Write     /
+    //                       /
+    //projectData[2][2] = 5; /
 
 
 
@@ -164,10 +163,16 @@ int main()
             j = 0;
 
             while (j < 5)
+            {
+                if (icount>13)
                 {
-                    writeFile << projectData[i][j] << ",";
-                    j++;
+                    writeFile << projectData[i][j];
+                    break;
                 }
+                writeFile << projectData[i][j] << ",";
+                j++;
+                icount++;
+            }
                 
            
             i++;
@@ -177,7 +182,7 @@ int main()
         i = 0;
        
 
-        cout <<"\n Fuck look for test.csv" <<endl;
+   //     cout <<"\n Fuck look for projectListRW.csv " << icount;
         // Close the file
         writeFile.close();
         system("pause");
